@@ -1,0 +1,65 @@
+<--- --------------------------------------------------------------------------------------- ----
+	
+	Blog Entry:
+	jQuery Demo: Creating A Sliding Image Puzzle Plug-In
+	
+	Author:
+	Ben Nadel / Kinky Solutions
+	
+	Link:
+	http://www.bennadel.com/index.cfm?event=blog.view&id=1009
+	
+	Date Posted:
+	Oct 24, 2007 at 1:23 PM
+	
+---- --------------------------------------------------------------------------------------- --->
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>jQuery Demo: Creating A Sliding Image Puzzle</title>
+ 
+<%= javascript_include_tag "jquery","jquery.puzzle" %>
+
+
+	<script type="text/javascript">
+ 
+		// When the document is ready, hook up the puzzle
+		// functionality to the targeted DIVs.
+		$(
+			function(){
+				$( "div.puzzle, p" ).puzzle( 100 );
+			}
+			);
+ 
+	</script>
+</head>
+<body>
+ 
+	<h1>
+		jQuery Demo: Creating A Sliding Image Puzzle
+	</h1>
+ 
+	<p>
+		Below, we are going to create a sliding image puzzle
+		using a DIV that contains a given image.
+	</p>
+ 
+
+	<div
+		class="puzzle"
+		style="float: left ; margin-right: 50px ;">
+ 
+		<img
+			src="/javascripts/fancymoves/img5.jpg"
+			width="400"
+			height="533"
+			alt="Puzzle Girl One"
+			/>
+ 
+	</div>
+ 
+ 
+</body>
+</html>

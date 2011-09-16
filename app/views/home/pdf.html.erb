@@ -1,0 +1,32 @@
+<%= javascript_include_tag "flexpaper/flexpaper_flash" %>
+	<a id="viewerPlaceHolder" style="width:660px;height:480px;display:block"></a>
+
+	<script type="text/javascript"> 
+	var fp = new FlexPaperViewer(	
+		'/javascripts/flexpaper/FlexPaperViewer',
+		'viewerPlaceHolder', { config : {
+			SwfFile : escape('/grass/swf.swf'),
+			Scale : 0.6, 
+			ZoomTransition : 'easeOut',
+			ZoomTime : 0.5,
+			ZoomInterval : 0.2,
+			FitPageOnLoad : true,
+			FitWidthOnLoad : false,
+			PrintEnabled : true,
+			FullScreenAsMaxWindow : false,
+			ProgressiveLoading : false,
+			MinZoomSize : 0.2,
+			MaxZoomSize : 5,
+			SearchMatchAll : false,
+			InitViewMode : 'Portrait',
+
+			ViewModeToolsVisible : true,
+			ZoomToolsVisible : true,
+			NavToolsVisible : true,
+			CursorToolsVisible : true,
+			SearchToolsVisible : true,
+
+			localeChain: 'en_US'
+			}});
+			</script>
+	

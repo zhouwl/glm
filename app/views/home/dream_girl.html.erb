@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0087)http://webdesignandsuch.com/posts/jquery-product-slider/jQuery-productSlider/index.html -->
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	
+	<title>Bedroom</title>
+    <meta name="description" content="Custom jQuery product slider built off the Moving Boxes slider with FancyBox built in.">
+  
+    <%= stylesheet_link_tag "../javascripts/fancymoves/style","../javascripts/fancymoves/jquery.fancybox-1.2.6", :cache => true %>
+	  <%= javascript_include_tag "jquery", "jquery.cookie", "fancymoves/slider","fancymoves/jquery.fancybox-1.2.6.pack", :cache => true %>
+    	
+	
+<script type="text/javascript">
+		$(document).ready(function() {
+			$("a.zoom2").fancybox({
+				'zoomSpeedIn'		:	500,
+				'zoomSpeedOut'		:	500,
+				'overlayOpacity'	:	0.6,
+				'overlayColor'		:	'#000'
+			});
+		});
+	</script>
+    
+       <script type="text/javascript">
+        $(document).ready(function() {
+            $('#Button1').click(function() {
+                location.reload();
+            });
+        });       
+    </script>
+</head>
+
+
+<body>
+
+<div id="demo-outer">
+  <div align="center">
+	<br/>
+  	<a href="/home/index" style="border-bottom:0px;color:white">I THINK THIS IS WHAT NAMED BEAUTY
+  	</a> 
+  </div>
+  <div id="wrapper"></div>
+	<div id="slider-outer">
+	<!-- Slider Starts -->
+		<div id="slider">    
+		  <img class="scrollButtons left" src="/javascripts/fancymoves/arrow-left.png" alt="">
+		<!-- Scroll Starts Here -->
+			<div style="overflow-x: hidden; overflow-y: hidden; " class="scroll">	
+			<!-- Scroll Container Starts -->
+				<div class="scrollContainer" style="width: 2746px; left: -350px; ">				
+			    <%= render :partial => "she" %>
+			  </div>
+			<!-- SCroll Container Ends -->
+			</div>
+		<!-- Scroll Ends Here -->
+		  <img class="scrollButtons right" src="/javascripts/fancymoves/arrow-right.png" alt="right">            
+	  </div>
+	<!-- Slider Ends -->
+	</div>
+<!-- Slider Outer Ends -->
+<div align="center">
+<br/>
+	<a href="/home/index" style="border-bottom:0px;color:white">BANK TO HOME
+	</a> 
+</div>
+</div>
+</body></html>
