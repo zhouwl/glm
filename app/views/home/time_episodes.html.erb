@@ -6,8 +6,10 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-	<title>jQuery Timeline 0.9.4 - Dando vida al tiempo</title>
-
+	<title>
+		Time Episodes
+	</title>
+    <link rel="shortcut icon" href="/images/favicon.ico"> 
 	<%= javascript_include_tag "jquery" %>
 	<%= javascript_include_tag "jQueryTimelinr_094/js/jquery.timelinr-0.9.4" %>
 	<%= stylesheet_link_tag "../javascripts/jQueryTimelinr_094/css/style.css" %>
@@ -16,10 +18,40 @@
 	<script type="text/javascript"> 
 	$(function(){
 		$().timelinr({
-			autoPlay: 'true',
-			autoPlayDirection: 'forward',
-			startAt: 4,
-			autoPlayPause: 3400
+			orientation: 'horizontal',
+		         // value: horizontal | vertical, default to horizontal
+		         containerDiv: '#timeline',
+		         // value: any HTML tag or #id, default to #timeline
+		         datesDiv: '#dates',
+		         // value: any HTML tag or #id, default to #dates
+		         datesSelectedClass: 'selected',
+		         // value: any class, default to selected
+		         datesSpeed: 500,
+		         // value: integer between 100 and 1000 (recommended), default to 500 (normal)
+		         issuesDiv : '#issues',
+		         // value: any HTML tag or #id, default to #issues
+		         issuesSelectedClass: 'selected',
+		         // value: any class, default to selected
+		         issuesSpeed: 200,
+		         // value: integer between 100 and 1000 (recommended), default to 200 (fast)
+		         issuesTransparency: 0.2,
+		         // value: integer between 0 and 1 (recommended), default to 0.2
+		         issuesTransparencySpeed: 500,
+		         // value: integer between 100 and 1000 (recommended), default to 500 (normal)
+		         prevButton: '#prev',
+		         // value: any HTML tag or #id, default to #prev
+		         nextButton: '#next',
+		         // value: any HTML tag or #id, default to #next
+		         arrowKeys: 'false',
+		         // value: true/false, default to false
+		         startAt: 4,
+		         // value: integer, default to 1 (first)
+		         autoPlay: 'false',
+		         // value: true | false, default to false
+		         autoPlayDirection: 'forward',
+		         // value: forward | backward, default to forward
+		         autoPlayPause: 34000
+		         // value: integer (1000 = 1 seg), default to 2000 (2segs)
 		})
 	});
 	</script>
@@ -32,7 +64,7 @@
 			<li><a href="#1900">1900</a></li>
 			<li><a href="#1930">1930</a></li>
 			<li><a href="#1944">1944</a></li>
-			<li><a href="#1950">1950</a></li>
+			<li><a href="#1950">000</a></li>
 			<li><a href="#1971">1971</a></li>
 			<li><a href="#1977">1977</a></li>
 			<li><a href="#1989">1989</a></li>
@@ -54,12 +86,12 @@
 			<li id="1944">
 				<img src="/javascripts/jQueryTimelinr_094/images/3.png" width="256" height="256" />
 				<h1>1944</h1>
-				<p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+				<p>圣经 创世记 1:9 神说，天下的水要聚在一处，使旱地露出来。事就这样成了。 1:10 神称旱地为地，称水的聚处为海，神看着是好的。 1:11 神说，地要发生青草和结种子的菜蔬，并结果子的树木，各从其类，果子都包着核。事就这样成了。</p>
 			</li>
 			<li id="1950">
-				<img src="/javascripts/jQueryTimelinr_094/images/4.png" width="256" height="256" />
-				<h1>1950</h1>
-				<p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+				<img src="/javascripts/jQueryTimelinr_094/images/h4.jpg" width="256" height="256" />
+				<h1>创世纪</h1>
+				<p>圣经 创世记 1:9 神说，天下的水要聚在一处，使旱地露出来。事就这样成了。 1:10 神称旱地为地，称水的聚处为海，神看着是好的。 1:11 神说，地要发生青草和结种子的菜蔬，并结果子的树木，各从其类，果子都包着核。事就这样成了。</p>
 			</li>
 			<li id="1971">
 				<img src="/javascripts/jQueryTimelinr_094/images/5.png" width="256" height="256" />

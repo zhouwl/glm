@@ -36,6 +36,7 @@ GEM
     arel (2.2.1)
     bcrypt-ruby (3.0.0)
     builder (3.0.0)
+    cocaine (0.2.0)
     columnize (0.3.4)
     devise (1.4.5)
       bcrypt-ruby (~> 3.0)
@@ -57,6 +58,11 @@ GEM
     multi_json (1.0.3)
     mysql2 (0.3.7)
     orm_adapter (0.0.5)
+    paperclip (2.4.1)
+      activerecord (>= 2.3.0)
+      activesupport (>= 2.3.2)
+      cocaine (>= 0.0.2)
+      mime-types
     pdf-reader (0.10.0)
       Ascii85 (~> 1.0.0)
     polyglot (0.3.2)
@@ -97,6 +103,9 @@ GEM
       ruby-debug-base19 (>= 0.11.19)
     ruby_core_source (0.1.5)
       archive-tar-minitar (>= 0.5.2)
+    simple_form (1.5.1)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
     sprockets (2.0.0)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -120,9 +129,11 @@ DEPENDENCIES
   devise (= 1.4.5)
   jquery-rails
   mysql2 (= 0.3.7)
+  paperclip
   pdf-reader
   rails (= 3.1.0)
   rmagick
   ruby-debug19
+  simple_form
   turn
   web-app-theme (>= 0.6.2)

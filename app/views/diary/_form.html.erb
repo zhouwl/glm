@@ -1,0 +1,23 @@
+    <p>
+	  <%= f.label :title,raw("标题 Title (required)&nbsp;&nbsp;&nbsp;<font color=red id=error_diary_title></font>") %>
+	  <%= f.text_field :title %>
+	</p>
+
+	<p>
+	  <%= f.label :category,"类别  Category (required)" %>
+      <%= f.text_field :category %>
+	</p>
+
+	<p>
+	  <%= f.label :media,"图片，视频，音乐地址 Image,Vedio,Music URL" %>
+      <%= f.text_field :media %>
+	</p>
+
+	<p>
+	  <%= f.label :content,"内容 Comment" %>
+	  <%= f.text_area :content,:rows => "10"%>
+    </p>
+
+	<p>
+	  <input name="submit" type="submit" id="submit" tabindex="5" value="POST COMMENT" />
+	</p>

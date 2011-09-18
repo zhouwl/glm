@@ -1,0 +1,17 @@
+创世纪1:3 神说：“要有光。”就有了光。<br/>
+Genesis1:3 And God said, Let there be light: and there was light.<br/>
+
+
+<div id="respond">
+
+	<h2 id="commentsForm">有什么想说的吗？ Got anything to say? </h2>
+
+	<div class="cancel-comment-reply">
+		<small><a rel="nofollow" id="cancel-comment-reply-link" href="/preview/?p=20#respond" style="display:none;">Click here to cancel reply.</a></small>
+	</div>
+
+
+	<%= form_for @diary, :url => "/diary/create", :html => {:id => "commentform"} do |f| %>
+	  <%= render :partial => "form" , :locals => {:f => f} %>
+	<% end %>
+</div>

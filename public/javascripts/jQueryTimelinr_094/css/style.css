@@ -83,8 +83,8 @@ h1,h2,h4,h5,h6 {
 				float: left;
 			}
 				#issues li img {
-					float: left;
-					margin: 10px 30px 10px 50px;
+					float: right;
+					margin: 10px 70px 10px 30px;
 				}
 				#issues li h1 {
 					color: #ffcc00;
@@ -94,7 +94,7 @@ h1,h2,h4,h5,h6 {
 				}
 				#issues li p {
 					font-size: 14px;
-					margin-right: 70px;
+					margin-left: 50px;
 					font-weight: normal;
 					line-height: 22px;
 					text-shadow: #000 1px 1px 2px;

@@ -1,11 +1,11 @@
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <title>Style 16 (Tomato) - Menu by Apycom.com</title>
-		  <%= stylesheet_link_tag "../javascripts/headsill/menu", :cache => true %>
-		  <%= javascript_include_tag "jquery", "jquery.cookie", "headsill/menu", :cache => true %>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<title>THE WAY OF GOD</title>
+	<link rel="shortcut icon" href="/images/favicon.ico"> 
+	<%= stylesheet_link_tag "../javascripts/headsill/menu", :cache => true %>
+	<%= javascript_include_tag "jquery", "jquery.cookie", "headsill/menu", :cache => true %>
 </head>
 <body>
 
@@ -13,7 +13,7 @@
 * { margin:0;
     padding:0;
 }
-body { background:#555 url(images/back.jpg); }
+body { background:#555 url(/javascripts/headsill/images/back.jpg); }
 #menu { top:30px; }
 #copyright {
     margin:100px auto;
@@ -23,10 +23,17 @@ body { background:#555 url(images/back.jpg); }
     text-indent:20px;
     padding:40px 0 0 0;
 }
+#logo_words {
+  position: absolute;
+  top: 20px;
+  left: 12px;
+  color: white;
+  font-size: 14px;
+}
 #copyright a { color:#bbb; }
 #copyright a:hover { color:#fff; }
 </style> 
- 
+ <div id="logo_words">THE WAY OF GOD</div>
 <div id="menu">
     <ul class="menu">
         <li><a href="#" class="parent"><span>Home</span></a>
@@ -52,10 +59,10 @@ body { background:#555 url(images/back.jpg); }
                         </li>
                     </ul></div>
                 </li>
-                <li><a href="/home/dream_girl"><span>Dream Girl</span></a></li>
+                <li><a href="/home/dream_girl"><span>梦中女孩 Dream Girl</span></a></li>
                 <li><a href="/home/bedroom"><span>Bedroom</span></a></li>
-			    <li><a href="/home/diary"><span>Diary</span></a></li>
-				<li><a href="/home/time_episodes"><span>Time Episodes</span></a></li>
+			    <li><a href="/diary"><span>日记 Diary</span></a></li>
+				<li><a target="_blank" href="/home/time_episodes"><span>时光相册 Time Episodes</span></a></li>
 				<li><a href="/home/apple_slider"><span>Apple Slider</span></a></li>
 				<li><a href="/home/image_puzzle"><span>Image Puzzle</span></a></li>
             </ul></div>
@@ -85,8 +92,16 @@ body { background:#555 url(images/back.jpg); }
         <li class="last"><a href="#"><span>Contacts</span></a></li>
     </ul>
 </div>
+<%= javascript_include_tag "../images/diary/jquery.prettyPhoto" %>
+<%= stylesheet_link_tag "../images/diary/prettyPhoto" %>
+<script type="text/javascript" charset="utf-8">
+		$(document).ready(function(){
+			$("a[rel^='prettyPhoto']").prettyPhoto();
+		});
+</script>
+<a href="/images/diary/diary3.jpg" rel="prettyPhoto" title="This is the description"><img src="/images/diary/diary3.jpg" width="450" height="300" alt="This is the title" /></a>
 
-<div id="copyright">Copyright &copy; 2011 <a href="http://apycom.com/">Apycom jQuery Menus</a></div>
+<div id="copyright">Copyright ©2011 Abel. Powered by Rails3. <a href="http://apycom.com/">Apycom jQuery Menus</a></div>
 
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

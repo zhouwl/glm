@@ -7,7 +7,8 @@ gem 'jquery-rails'
 gem 'web-app-theme', '>= 0.6.2'
 gem "pdf-reader"
 gem "rmagick"
-
+gem "simple_form"
+gem "paperclip"
 
 # Gems used only for assets and not required
 # in production environments by default.
