@@ -18,13 +18,7 @@ class HomeController < ApplicationController
   def image_puzzle
   end
   
-  def diary
-   render :layout => "diary"  
-  end
-  
-  def diart_read_more
-    
-  end
+
   
   def pdf
     require 'pdf/reader'
