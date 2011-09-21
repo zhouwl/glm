@@ -11,13 +11,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110917142434) do
+ActiveRecord::Schema.define(:version => 20110921112607) do
 
   create_table "diaries", :force => true do |t|
     t.string   "title"
     t.string   "category"
-    t.string   "media"
     t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "media_file_name"
+    t.string   "media_content_type"
+    t.integer  "media_file_size"
+    t.datetime "media_updated_at"
+  end
+
+  create_table "time_episodes", :force => true do |t|
+    t.string   "line"
+    t.string   "title"
+    t.text     "content"
+    t.string   "pic_file_name"
+    t.string   "pic_content_type"
+    t.integer  "pic_file_size"
+    t.datetime "pic_update_at"
+    t.float    "order"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

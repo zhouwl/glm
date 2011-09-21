@@ -1,0 +1,10 @@
+
+[
+<%if @diary %>
+<%= link_to 'Show', @diary %> |
+<%= link_to 'Edit', edit_diary_path(@diary) %> |
+<%= link_to 'Destroy', @diary, confirm: 'Are you sure?', method: :delete %> |
+<% end %>
+<%= link_to 'Back', diaries_path %>
+
+]

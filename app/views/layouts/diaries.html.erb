@@ -6,15 +6,12 @@
 <meta charset="UTF-8"> 
 <title>Diary/Notebook | Free Premium Wordpress Theme by Site5</title> 
 
-<link rel="stylesheet" type="text/css" media="all" href="../images/diary/style.css"> 
-<link rel="stylesheet" type="text/css" media="all" href="../images/diary/skin.php"> 
+<link rel="stylesheet" type="text/css" media="all" href="/images/diary/style.css">  
 <%= javascript_include_tag "jquery",
-    "../images/diary/jquery.prettyPhoto",
-
+    "/images/diary/jquery.prettyPhoto.js",
 	"jquery-validation-1.8.1/jquery.validate.min",
-	"jquery-validation-1.8.1/localization/messages_cn"
- %>
-<%= stylesheet_link_tag "../images/diary/prettyPhoto" %>
+	"jquery-validation-1.8.1/localization/messages_cn" %>
+<%= stylesheet_link_tag "/images/diary/prettyPhoto", "coderay" %>
 <link rel="shortcut icon" href="/images/favicon.ico"> 
 <!-- [if IE 7]>
 <link rel="stylesheet" media="all" href="http://www.wpdiarytheme.com/preview/wp-content/themes/diary/css/ie7.css" />
@@ -22,10 +19,10 @@
  
 
 <!-- Google Fonts --> 
-<link href="../images/diary/css.css" rel="stylesheet" type="text/css"> 
-<link href="../images/diary/css1.css" rel="stylesheet" type="text/css"> 
-<link href="../images/diary/css2.css" rel="stylesheet" type="text/css"> 
-<link href="../images/diary/css3.css" rel="stylesheet" type="text/css"> 
+<link href="/images/diary/css.css" rel="stylesheet" type="text/css"> 
+<link href="/images/diary/css1.css" rel="stylesheet" type="text/css"> 
+<link href="/images/diary/css2.css" rel="stylesheet" type="text/css"> 
+<link href="/images/diary/css3.css" rel="stylesheet" type="text/css"> 
  
 <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--> 
 <link rel="index" title="Diary/Notebook" href="http://www.wpdiarytheme.com/preview"> 
@@ -53,6 +50,7 @@
  			<!-- Begin Main Content ( left col ) --> 
 			<section id="main-content"> 
 <%= yield%>
+<%= render :partial => "foot"%>
 		</section> 
 		<!-- End Main Content ( left col ) --> 
 		
@@ -97,7 +95,7 @@
 	<div id="site5bottom">Theme by Site5. <br><a href="http://www.site5.com/">Experts in Web Hosting</a>.</div> 
 	<div id="html5"> 
 		<a href="http://www.w3.org/html/logo/" title="HTML5 Inside"> 
-		<img src="../images/diary/html5_logo.png" alt="HTML5 Inside" title="HTML5 Inside"></a><br> 
+		<img src="/images/diary/html5_logo.png" alt="HTML5 Inside" title="HTML5 Inside"></a><br> 
   </div> 
   
 	© Copyright 2011 Diary/Notebook Theme by Site5.com. All Rights Reserved. 	</footer> 
@@ -111,7 +109,7 @@
 
 
   $(document).ready(function(){
-	//initial prettyphoto
+	  //initial prettyphoto
     $("a[rel^='prettyPhoto']").prettyPhoto();
 	
     $('#butContact').mouseover(function(){
@@ -120,13 +118,13 @@
 			$(this).fadeIn('normal');
 		});
 
-	$('#butContact').mouseout(function(){
+	 $('#butContact').mouseout(function(){
 			$(this).hide();
 			$(this).css('background-position','50% 0');
 			$(this).fadeIn('normal');
 		});
 
-
+ //validation
 	$("#commentform").submit(function(){
 	  jQuery('#diary_title').css("border","none");
 	  if ($.trim(jQuery('#diary_title').val()) == ""){

@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Line:</b>
+  <%= @time_episode.line %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @time_episode.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @time_episode.content %>
+</p>
+
+<p>
+<%= image_tag @time_episode.pic.url %>
+<%= image_tag @time_episode.pic.url(:medium) %>
+<%= image_tag @time_episode.pic.url(:thumb) %>
+</p>
+
+<p>
+  <b>Pic file name:</b>
+  <%= @time_episode.pic_file_name %>
+</p>
+
+<p>
+  <b>Pic content type:</b>
+  <%= @time_episode.pic_content_type %>
+</p>
+
+<p>
+  <b>Pic file size:</b>
+  <%= @time_episode.pic_file_size %>
+</p>
+
+<p>
+  <b>Pic update at:</b>
+  <%= @time_episode.pic_update_at %>
+</p>
+
+<p>
+  <b>Order:</b>
+  <%= @time_episode.order %>
+</p>
+
+
+<%= link_to 'Edit', edit_time_episode_path(@time_episode) %> |
+<%= link_to 'Back', time_episodes_path %>

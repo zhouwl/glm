@@ -9,7 +9,7 @@
 	<title>
 		Time Episodes
 	</title>
-    <link rel="shortcut icon" href="/images/favicon.ico"> 
+  <link rel="shortcut icon" href="/images/favicon.ico"> 
 	<%= javascript_include_tag "jquery" %>
 	<%= javascript_include_tag "jQueryTimelinr_094/js/jquery.timelinr-0.9.4" %>
 	<%= stylesheet_link_tag "../javascripts/jQueryTimelinr_094/css/style.css" %>
@@ -44,13 +44,13 @@
 		         // value: any HTML tag or #id, default to #next
 		         arrowKeys: 'false',
 		         // value: true/false, default to false
-		         startAt: 4,
+		         startAt: 1,
 		         // value: integer, default to 1 (first)
-		         autoPlay: 'false',
+		         autoPlay: 'true',
 		         // value: true | false, default to false
 		         autoPlayDirection: 'forward',
 		         // value: forward | backward, default to forward
-		         autoPlayPause: 34000
+		         autoPlayPause: 3400
 		         // value: integer (1000 = 1 seg), default to 2000 (2segs)
 		})
 	});
@@ -61,68 +61,18 @@
 	Variations On The Canon By Pachelbel<audio src="/music/c.mp3" autoplay=true></audio>
 	<div id="timeline">
 		<ul id="dates">
-			<li><a href="#1900">1900</a></li>
-			<li><a href="#1930">1930</a></li>
-			<li><a href="#1944">1944</a></li>
-			<li><a href="#1950">000</a></li>
-			<li><a href="#1971">1971</a></li>
-			<li><a href="#1977">1977</a></li>
-			<li><a href="#1989">1989</a></li>
-			<li><a href="#1999">1999</a></li>
-			<li><a href="#2001">2001</a></li>
-			<li><a href="#2011">2011</a></li>
+			<% @time_episodes.each do |r| %>
+				<li><a href="#<%= r.line %>"><%= r.line %></a></li>
+			<% end %>
 		</ul>
-		<ul id="issues">
-			<li id="1900">
-				<img src="/javascripts/jQueryTimelinr_094/images/1.png" width="256" height="256" />
-				<h1>1900</h1>
-				<p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-			</li>
-			<li id="1930">
-				<img src="/javascripts/jQueryTimelinr_094/images/2.png" width="256" height="256" />
-				<h1>1930</h1>
-				<p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-			</li>
-			<li id="1944">
-				<img src="/javascripts/jQueryTimelinr_094/images/3.png" width="256" height="256" />
-				<h1>1944</h1>
-				<p>圣经 创世记 1:9 神说，天下的水要聚在一处，使旱地露出来。事就这样成了。 1:10 神称旱地为地，称水的聚处为海，神看着是好的。 1:11 神说，地要发生青草和结种子的菜蔬，并结果子的树木，各从其类，果子都包着核。事就这样成了。</p>
-			</li>
-			<li id="1950">
-				<img src="/javascripts/jQueryTimelinr_094/images/h4.jpg" width="256" height="256" />
-				<h1>创世纪</h1>
-				<p>圣经 创世记 1:9 神说，天下的水要聚在一处，使旱地露出来。事就这样成了。 1:10 神称旱地为地，称水的聚处为海，神看着是好的。 1:11 神说，地要发生青草和结种子的菜蔬，并结果子的树木，各从其类，果子都包着核。事就这样成了。</p>
-			</li>
-			<li id="1971">
-				<img src="/javascripts/jQueryTimelinr_094/images/5.png" width="256" height="256" />
-				<h1>1971</h1>
-				<p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-			</li>
-			<li id="1977">
-				<img src="/javascripts/jQueryTimelinr_094/images/6.png" width="256" height="256" />
-				<h1>1977</h1>
-				<p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-			</li>
-			<li id="1989">
-				<img src="/javascripts/jQueryTimelinr_094/images/7.png" width="256" height="256" />
-				<h1>1989</h1>
-				<p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-			</li>
-			<li id="1999">
-				<img src="/javascripts/jQueryTimelinr_094/images/8.png" width="256" height="256" />
-				<h1>1999</h1>
-				<p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-			</li>
-			<li id="2001">
-				<img src="/javascripts/jQueryTimelinr_094/images/9.png" width="256" height="256" />
-				<h1>2001</h1>
-				<p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-			</li>
-			<li id="2011">
-				<img src="/javascripts/jQueryTimelinr_094/images/10.png" width="256" height="256" />
-				<h1>2011</h1>
-				<p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-			</li>
+		<ul id="issues">			
+			<% @time_episodes.each do |r| %>
+				<li id="<%= r.line %>">
+					<%= image_tag r.pic.url(:medium), :width => "256", :height => "256"%>
+					<h1><%= r.title %></h1>
+					<p><%= r.content %></p>
+				</li>
+			<% end %>
 		</ul>
 		<div id="grad_left"></div>
 		<div id="grad_right"></div>

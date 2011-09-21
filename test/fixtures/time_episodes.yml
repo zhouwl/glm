@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  line: MyString
+  title: MyString
+  content: MyText
+  pic_file_name: MyString
+  pic_content_type: MyString
+  pic_file_size: 1
+  pic_update_at: 2011-09-18 20:07:48
+  order: 1.5
+
+two:
+  line: MyString
+  title: MyString
+  content: MyText
+  pic_file_name: MyString
+  pic_content_type: MyString
+  pic_file_size: 1
+  pic_update_at: 2011-09-18 20:07:48
+  order: 1.5

@@ -9,7 +9,10 @@ gem "pdf-reader"
 gem "rmagick"
 gem "simple_form"
 gem "paperclip"
+gem "redcarpet"
+gem "coderay"
 
+#############################################
 # Gems used only for assets and not required
 # in production environments by default.
 # group :assets do

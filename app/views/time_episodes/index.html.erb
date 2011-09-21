@@ -1,0 +1,31 @@
+<h1>Listing time_episodes</h1>
+
+<table>
+  <tr>
+    <th>Line</th>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Pic file name</th>
+    <th>Order</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @time_episodes.each do |time_episode| %>
+  <tr>
+    <td><%= time_episode.line %></td>
+    <td><%= time_episode.title %></td>
+    <td><%= time_episode.content %></td>
+    <td><%= time_episode.pic_file_name %></td>
+    <td><%= time_episode.order %></td>
+    <td><%= link_to 'Show', time_episode %></td>
+    <td><%= link_to 'Edit', edit_time_episode_path(time_episode) %></td>
+    <td><%= link_to 'Destroy', time_episode, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Time episode', new_time_episode_path %>

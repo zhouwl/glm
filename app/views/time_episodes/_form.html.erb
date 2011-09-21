@@ -1,0 +1,37 @@
+<%= form_for(@time_episode) do |f| %>
+  <% if @time_episode.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@time_episode.errors.count, "error") %> prohibited this time_episode from being saved:</h2>
+
+      <ul>
+      <% @time_episode.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :line %><br />
+    <%= f.text_field :line %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :picture %><br />
+    <%= f.file_field :pic %>
+  </div>
+  <div class="field">
+    <%= f.label :order %><br />
+    <%= f.text_field :order %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
